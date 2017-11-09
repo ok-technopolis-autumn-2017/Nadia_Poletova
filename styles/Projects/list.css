@@ -57,7 +57,7 @@
             background: url('../../img/todo-app-design-master/icons/completed.png') no-repeat center;
             border: 1px solid #76cbbb;
             }
-        .todo-item_ready-mark:checked + .todo-item_text{
+        .__ready .todo-item_text{
             text-decoration: line-through;
             }
 

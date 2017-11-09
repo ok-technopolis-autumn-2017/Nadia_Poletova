@@ -24,7 +24,7 @@
             color: #888888;
             }
 
-        .todos_filter:active {
+        .__active {
             border: 1px solid #ebdfdf;
             }
     .todos-action-bar_clear-completed{
