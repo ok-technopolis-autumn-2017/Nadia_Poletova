@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8"/>
     <title>TODOS</title>
+    <link href="styles/default.css" rel="stylesheet">
 </head>
 
 <body>
@@ -14,49 +15,79 @@
     <div class="todos-main">
 
         <div class="todos-add">
-            <button class="todos-add_select-all"
-                    area-label="Mark all as completed">
+            <button class="todos-add_select-all" area-label="Mark all as completed">
+                <div class="todos-add_select-all_icon"></div>
             </button>
-            <input class="todos-add_input" placeholder="add"
+           <div class="todos-add_in">
+               <input class="todos-add_input" placeholder="What needs to be done?"
                    aria-label="Items for todo adding">
+           </div>
         </div>
 
         <div class="todos-list">
-
             <div class="todo-item">
-                <input type="checkbox" class="todo-item_ready-mark"
-                       aria-label="Mark as (un)performed">
-                <textarea class="todo-item_text">
-                                HTML
-                            </textarea>
+                <div class="todo-item_checkbox">
+                    <label class="todo-item_checkbox-layers">
+                        <input type="checkbox" class="todo-item_ready-mark"
+                            aria-label="Mark as (un)performed">
+                        <div class="todo-item_ready-img"></div>
+                    </label>
+                </div>
+                <div class="todo-item_textbox">
+                    <textarea class="todo-item_text">HTML</textarea>
+                </div>
+
                 <button class="todo-item_remove" aria-label="Delete todo"></button>
+
             </div>
 
             <div class="todo-item __ready">
-                <input type="checkbox" checked="checked" class="todo-item_ready-mark"
-                       aria-label="Mark as (un)performed">
-                <textarea class="todo-item_text">
-                                CSS
-                            </textarea>
-                <button class="todo-item_remove" aria-label="Delete todo"></button>
+                <div class="todo-item_checkbox">
+                    <label class="todo-item_checkbox-layers">
+                        <input type="checkbox" class="todo-item_ready-mark"
+                               aria-label="Mark as (un)performed">
+                        <div class="todo-item_ready-img"></div>
+                    </label>
+                </div>
+                <div class="todo-item_textbox">
+                    <textarea class="todo-item_text">CSS</textarea>
+                </div>
+
+                    <button class="todo-item_remove" aria-label="Delete todo"></button>
+
+            </div>
+
+
+            <div class="todo-item">
+                <div class="todo-item_checkbox">
+                    <label class="todo-item_checkbox-layers">
+                        <input type="checkbox" class="todo-item_ready-mark"
+                               aria-label="Mark as (un)performed">
+                        <div class="todo-item_ready-img"></div>
+                    </label>
+                </div>
+                <div class="todo-item_textbox">
+                    <textarea class="todo-item_text">JS</textarea>
+                </div>
+
+                    <button class="todo-item_remove" aria-label="Delete todo"></button>
+
             </div>
 
             <div class="todo-item">
-                <input type="checkbox" class="todo-item_ready-mark"
-                       aria-label="Mark as (un)performed">
-                <textarea class="todo-item_text">
-                                JS
-                            </textarea>
-                <button class="todo-item_remove" aria-label="Delete todo"></button>
-            </div>
+                <div class="todo-item_checkbox">
+                    <label class="todo-item_checkbox-layers">
+                        <input type="checkbox" class="todo-item_ready-mark"
+                               aria-label="Mark as (un)performed">
+                        <div class="todo-item_ready-img"></div>
+                    </label>
+                </div>
+                <div class="todo-item_textbox">
+                    <textarea class="todo-item_text">JS tools</textarea>
+                </div>
 
-            <div class="todo-item">
-                <input type="checkbox" class="todo-item_ready-mark"
-                       aria-label="Mark as (un)performed">
-                <textarea class="todo-item_text">
-                                JS tools
-                            </textarea>
-                <button class="todo-item_remove" aria-label="Delete todo"></button>
+                    <button class="todo-item_remove" aria-label="Delete todo"></button>
+
             </div>
 
         </div>
@@ -86,3 +117,4 @@
 </div>
 </body>
 </html>
+<!--not value-->
