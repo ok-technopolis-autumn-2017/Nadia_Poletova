@@ -14,8 +14,8 @@
         }
 
     .todos-add_select-all {
-        width: 64px;
-        height: 64px;
+        width: $add-select-all;
+        height: $add-select-all;
         background: none;
         border: none;
         padding: 0;
@@ -23,10 +23,11 @@
         float: left;
         position: relative;
         outline: none;
+        cursor: pointer;
 
         .todos-add_select-all_icon {
-            width: 24px;
-            height: 12px;
+            width: $add-select-all-icon-widht;
+            height: $add-select-all-icon-height;
             background: url('../../../images/icons/select-all.png') no-repeat 0 0;
             position: absolute;
             left: 50%;
@@ -37,6 +38,7 @@
 
     .todos-add_in {
         overflow: hidden;
+        width: 100%;
 
         .todos-add_input {
 
@@ -46,16 +48,21 @@
             border: 0;
             background: none;
 
-            color: #666;
-            font-size: 24px;
+            color: $add-text-color;
+            font-size: $add-input-text-size;
             line-height: 30px;
             padding-right: 12px;
             outline: none;
-            }
+            cursor: pointer;
 
-        &::placeholder {
-            color: #ccc;
-            font-style: italic;
+            &::placeholder {
+                color: $add-text-color-placeholder;
+                font-style: italic;
+                }
+            &:-ms-input-placeholder{
+                color: $add-text-color-placeholder !important;
+                font-style: italic;
+                }
             }
         }
     }

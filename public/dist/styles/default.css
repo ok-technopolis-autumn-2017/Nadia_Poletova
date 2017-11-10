@@ -90,11 +90,6 @@ video {
   vertical-align: baseline;
 }
 
-:root {
-  --bg-color-main: #ffffff;
-  --bg-color: #f5f5f5;
-}
-
 body,
 input,
 button,
@@ -105,7 +100,7 @@ h1 {
 }
 
 body {
-  background: var(--bg-color);
+  background: #f5f5f5;
 }
 
 .todos-main {
@@ -114,7 +109,7 @@ body {
   margin: 0 auto;
   padding: 0;
   position: relative;
-  background: var(--bg-color-main);
+  background: #fff;
   align-items: center;
 }
 
@@ -125,12 +120,8 @@ body {
   text-align: center;
 }
 
-:root {
-  --bg-color: #ffffff;
-}
-
 .todos-main {
-  background: var(--bg-color);
+  background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   position: relative;
 }
@@ -140,7 +131,7 @@ body {
   content: '';
   position: absolute;
   top: 100%;
-  background: var(--bg-color);
+  background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   z-index: -1;
 }
@@ -180,6 +171,7 @@ body {
   float: left;
   position: relative;
   outline: none;
+  cursor: pointer;
 }
 
 .todos-add .todos-add_select-all .todos-add_select-all_icon {
@@ -194,6 +186,7 @@ body {
 
 .todos-add .todos-add_in {
   overflow: hidden;
+  width: 100%;
 }
 
 .todos-add .todos-add_in .todos-add_input {
@@ -206,26 +199,26 @@ body {
   line-height: 30px;
   padding-right: 12px;
   outline: none;
+  cursor: pointer;
 }
 
-.todos-add .todos-add_in::placeholder {
+.todos-add .todos-add_in .todos-add_input::placeholder {
   color: #ccc;
   font-style: italic;
 }
 
-:root {
-  --bg-color: #ffffff;
-  --border-color: #ebdfdf;
-  --text-color: #888888;
+.todos-add .todos-add_in .todos-add_input:-ms-input-placeholder {
+  color: #ccc !important;
+  font-style: italic;
 }
 
 .todos-action-bar {
-  background-color: var(--bg-color);
+  background-color: #fff;
   height: 40px;
   border-top: 1px solid #e7e7e7;
   padding-right: 12px;
   padding-left: 12px;
-  color: var(--text-color);
+  color: #888;
   font-weight: 100;
   flex-direction: row;
   justify-content: space-between;
@@ -233,35 +226,32 @@ body {
   display: flex;
 }
 
+.todos-action-bar .todos-action-bar_counter {
+  cursor: pointer;
+}
+
 .todos-action-bar .todos_filters .todos-filter {
-  background-color: var(--bg-color);
-  border: 1px solid var(--bg-color);
+  background-color: #fff;
+  border: 1px solid #fff;
   outline: none;
-  color: --text-color;
+  color: #888;
+  cursor: pointer;
 }
 
 .todos-action-bar .todos_filters .todos-filter.__active {
-  border: 1px solid var(--border-color);
+  border: 1px solid #ebdfdf;
 }
 
 .todos-action-bar .todos-action-bar_clear-completed {
-  background-color: var(--bg-color);
-  color: --text-color;
-  border: 1px solid var(--bg-color);
+  background-color: #fff;
+  color: #888;
+  border: 1px solid #fff;
   outline: none;
+  cursor: pointer;
 }
 
 .todos-action-bar .todos-action-bar_clear-completed:active {
-  border: 1px solid var(--border-color);
-}
-
-:root {
-  --bg-color: #ffffff;
-  --bg-color-hover: #fafafa;
-  --border-color: #e7e7e7;
-  --text-color: #666666;
-  --text-color-ready: #cccccc;
-  --checkbox-color: #76cbbb;
+  border: 1px solid #ebdfdf;
 }
 
 .todos-list {
@@ -275,8 +265,8 @@ body {
 .todos-list .todo-item {
   height: 60px;
   position: relative;
-  border-top: 1px solid var(--border-color);
-  border-bottom: 1px solid var(--border-color);
+  border-top: 1px solid #e7e7e7;
+  border-bottom: 1px solid #e7e7e7;
   border-left: none;
   border-right: none;
   margin-bottom: -1px;
@@ -288,11 +278,11 @@ body {
 
 .todos-list .todo-item.__ready .todo-item_textbox .todo-item_text {
   text-decoration: line-through;
-  color: var(--text-color-ready);
+  color: #ccc;
 }
 
 .todos-list .todo-item:hover {
-  background: var(--bg-color-hover);
+  background: #fafafa;
   cursor: pointer;
 }
 
@@ -301,47 +291,41 @@ body {
 }
 
 .todos-list .todo-item:hover .todo-item_text {
-  background-color: var(--bg-color-hover);
+  background-color: #fafafa;
 }
 
 .todos-list .todo-item .todo-item_checkbox {
   width: 36px;
   height: 36px;
-  border: 1px solid var(--border-color);
+  border: 1px solid #e7e7e7;
   border-radius: 50px;
   margin-right: 12px;
   flex-basis: 36px;
+  position: relative;
+  z-index: 2;
 }
 
-.todos-list .todo-item .todo-item_checkbox .todo-item_checkbox-layers {
-  width: 36px;
-  height: 36px;
+.todos-list .todo-item .todo-item_checkbox .todo-item_ready-mark {
+  opacity: 0;
+  padding: 0;
+  width: 105%;
+  height: 105%;
+  overflow: hidden;
   position: absolute;
   z-index: 2;
 }
 
-.todos-list .todo-item .todo-item_checkbox .todo-item_checkbox-layers .todo-item_ready-mark {
-  opacity: 0;
-  padding: 0;
-  width: 36px;
-  height: 36px;
-  overflow: hidden;
-  position: absolute;
-  z-index: 0;
-}
-
-.todos-list .todo-item .todo-item_checkbox .todo-item_checkbox-layers .todo-item_ready-mark:checked + .todo-item_ready-img {
+.todos-list .todo-item .todo-item_checkbox .todo-item_ready-mark:checked + .todo-item_ready-img {
   background: url("../images/icons/completed.png") no-repeat center;
-  border: 1px solid var(--checkbox-color);
+  border: 1px solid #76cbbb;
 }
 
-.todos-list .todo-item .todo-item_checkbox .todo-item_checkbox-layers .todo-item_ready-img {
+.todos-list .todo-item .todo-item_checkbox .todo-item_ready-img {
   padding: 0;
-  width: 36px;
-  height: 36px;
+  width: 100%;
+  height: 100%;
   border-radius: 50px;
   position: absolute;
-  z-index: 1;
 }
 
 .todos-list .todo-item .todo-item_textbox {
@@ -357,7 +341,8 @@ body {
   border: none;
   outline: none;
   font-size: 20px;
-  color: var(--text-color);
+  color: #666;
+  cursor: pointer;
 }
 
 .todos-list .todo-item .todo-item_remove {
@@ -368,7 +353,8 @@ body {
   bottom: 22px;
   right: 12px;
   border: 0;
-  background: var(--bg-color);
+  cursor: pointer;
+  background: #fff;
   outline: none;
 }
 /*# sourceMappingURL=default.css.map */

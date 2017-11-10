@@ -1,17 +1,10 @@
-:root{
-    --bg-color: #ffffff;
-    --border-color: #ebdfdf;
-    --text-color:#888888;
-    }
-
-
 .todos-action-bar {
-    background-color: var(--bg-color);
-    height: 40px;
-    border-top: 1px solid #e7e7e7;
-    padding-right: 12px;
-    padding-left: 12px;
-    color: var(--text-color);
+    background-color: $bg-color;
+    height: $action-height;
+    border-top: 1px solid $list-border-color;
+    padding-right: $action-paddings-length;
+    padding-left: $action-paddings-length;
+    color: $action-text-color;
     font-weight: 100;
     flex-direction: row;
     justify-content: space-between;
@@ -19,29 +12,31 @@
     display: flex;
 
     .todos-action-bar_counter {
-
+        cursor: pointer;
         }
     .todos_filters {
 
         .todos-filter {
-            background-color: var(--bg-color);
-            border: 1px solid var(--bg-color);
+            background-color: $bg-color;
+            border: 1px solid $bg-color;
             outline: none;
-            color: (--text-color);
+            color: $action-text-color;
+            cursor: pointer;
 
             &.__active {
-                border: 1px solid var(--border-color);
+                border: 1px solid $action-border-color;
                 }
             }
         }
     .todos-action-bar_clear-completed {
-        background-color: var(--bg-color);
-        color: (--text-color);
-        border: 1px solid var(--bg-color);
+        background-color: $bg-color;
+        color: $action-text-color;
+        border: 1px solid $bg-color;
         outline: none;
+        cursor: pointer;
 
         &:active {
-            border: 1px solid var(--border-color);
+            border: 1px solid $action-border-color;
             }
         }
     }
