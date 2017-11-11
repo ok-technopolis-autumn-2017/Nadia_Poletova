@@ -1,9 +1,10 @@
+@import "../config/globals";
 .todos-action-bar {
     background-color: $bg-color;
     height: $action-height;
     border-top: 1px solid $list-border-color;
-    padding-right: $action-paddings-length;
-    padding-left: $action-paddings-length;
+    padding-right: $offset_3x;
+    padding-left: $offset_3x;
     color: $action-text-color;
     font-weight: 100;
     flex-direction: row;

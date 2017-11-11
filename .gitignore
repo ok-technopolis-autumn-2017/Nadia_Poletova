@@ -1,5 +1,4 @@
 .idea
 node_modules
-gulpfile.js
-package-lock.json
 Nadia_Poletova.iml
+public/dist/
