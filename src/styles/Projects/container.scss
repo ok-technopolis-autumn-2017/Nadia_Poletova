@@ -9,14 +9,16 @@
         min-height: 0;
         }
 
-    &.__empty &.todos-add_select-all_icon{
+    &.__empty .todos-add_select-all_icon{
         display: none;
         }
 
     &.__empty {
-        &:before, &:after, &.todos-list &.todos-action-bar {
+        &:before, &:after, .todos-list, .todos-action-bar {
             display: none;
             }
+
+
         }
 
 
