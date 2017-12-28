@@ -7,6 +7,24 @@
     <link href="dist/styles/default.css" rel="stylesheet">
 </head>
 
+<script type="text/html" id="todoItemTemplate">
+    <div class="todo-item">
+        <div class="todo-item_checkbox">
+
+            <input type="checkbox" class="todo-item_ready-mark"
+                   aria-label="Mark as (un)performed">
+            <div class="todo-item_ready-img"></div>
+
+        </div>
+        <div class="todo-item_textbox">
+            <textarea class="todo-item_text">HTML</textarea>
+        </div>
+
+        <button class="todo-item_remove" aria-label="Delete todo"></button>
+
+    </div>
+</script>
+
 <body>
 <div class="todos-header">
 
@@ -18,7 +36,7 @@
             <button class="todos-add_select-all" area-label="Mark all as completed">
                 <div class="todos-add_select-all_icon"></div>
             </button>
-           <div class="todos-add_in">
+           <div class="todos-add_input-container">
                <input class="todos-add_input" placeholder="What needs to be done?"
                    aria-label="Items for todo adding">
            </div>
