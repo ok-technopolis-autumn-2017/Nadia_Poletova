@@ -10,11 +10,9 @@
     .todos-list .todo-item {
         height: $item-height;
         position: relative;
-        border-top: 1px solid $list-border-color;
         border-bottom: 1px solid $list-border-color;
         border-left: none;
         border-right: none;
-        margin-bottom: -1px;
         padding: 0 $offset_3x;
         overflow: hidden;
         flex-direction: row;
@@ -72,14 +70,15 @@
 
 
     .todos-list .todo-item .todo-item_textbox {
-        overflow: hidden;
-        flex-grow: 2;
         padding-top: $offset_6x;
+        flex-grow: 2;
         }
 
     .todos-list .todo-item .todo-item_textbox .todo-item_text {
         width: 100%;
+        overflow: hidden;
         padding-right: $offset_8x;
+        padding-top: 0;
         resize: none;
         border: none;
         outline: none;
@@ -110,4 +109,7 @@
                 color: $list-text-color-ready;
                 }
             }
+        }
+    .todos-list .todo-item.__hide {
+        display: none;
         }
