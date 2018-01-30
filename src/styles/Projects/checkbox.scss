@@ -1,0 +1,13 @@
+@import "../config/globals";
+
+.my-checkbox {
+
+    width: 36px;
+    height: 36px;
+    border: 1px solid $list-border-color;
+    border-radius: 50%;
+    margin-right: $offset_3x;
+    flex-basis:36px;
+    position: relative;
+    z-index: 0;
+    }

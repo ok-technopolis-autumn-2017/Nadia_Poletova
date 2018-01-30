@@ -1,0 +1,66 @@
+
+@import "../config/globals";
+
+    .todos-add {
+        font-weight: 100;
+        border-bottom: 1px solid $list-border-color;
+        }
+
+    .todos-add.after {
+        content: '';
+        display: block;
+        clear: both;
+        }
+    .todos-add .todos-add_select-all {
+        width: $add-select-all;
+        height: $add-select-all;
+        background: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+        float: left;
+        position: relative;
+        outline: none;
+        cursor: pointer;
+        }
+
+    .todos-add .todos-add_select-all .todos-add_select-all_icon {
+        width: $add-select-all-icon-widht;
+        height: $add-select-all-icon-height;
+        background: url('../../../images/icons/select-all.png') no-repeat 0 0;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+        }
+
+    .todos-add .todos-add_input-container {
+        overflow: hidden;
+        height: $add-select-all;
+        }
+    .todos-add .todos-add_input-container .todos-add_input {
+
+        width: 100%;
+        margin-top: $offset_4x;
+        box-sizing: border-box;
+        border: 0;
+        background: none;
+        color: $add-text-color;
+        font-size: $add-input-text-size;
+        line-height: $offset_7x+$offset_half;
+        padding-right: $offset_3x;
+        outline: none;
+        cursor: pointer;
+        }
+
+    .todos-add_input-container .todos-add_input::placeholder {
+        color: $add-text-color-placeholder;
+        font-style: italic;
+        }
+
+    .todos-add .todos-add_input-container .todos-add_input.-ms-input-placeholder {
+        color: $add-text-color-placeholder !important;
+        font-style: italic;
+        }

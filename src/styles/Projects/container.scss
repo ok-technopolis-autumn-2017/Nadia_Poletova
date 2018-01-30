@@ -1,0 +1,44 @@
+@import "../config/globals";
+.todos-main {
+    background: $bg-color;
+    box-shadow: 0 $offset_half $offset rgba(0, 0, 0, .2);
+    position: relative;
+
+
+    &.__empty{
+        max-height: 60px;
+        min-height: 0;
+        }
+
+    &.__empty .todos-add_select-all_icon{
+        display: none;
+        }
+
+    &.__empty {
+        &:before, &:after, .todos-list, .todos-action-bar {
+            display: none;
+            }
+
+
+        }
+
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        background: $bg-color;
+        box-shadow: 0 $offset_half $offset rgba(0, 0, 0, .2);
+        z-index: -1;
+        }
+    &:before {
+        height: $offset_2x+$offset_half;
+        left: $offset;
+        right: $offset;
+        }
+    &:after {
+        height: 5px;
+        left: $offset_half;
+        right: $offset_half;
+        }
+    }

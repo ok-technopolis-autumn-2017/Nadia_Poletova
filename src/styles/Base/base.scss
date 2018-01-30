@@ -1,0 +1,21 @@
+@import "../config/globals";
+body, input, button, textarea, h1{
+    font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    font-size: $default;
+    }
+
+
+body {
+    background: $g-color;
+    }
+
+
+.todos-main {
+    min-width: $main-width-min;
+    max-width: $main-width-max;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    background: $bg-color;
+    align-items: center;
+    }

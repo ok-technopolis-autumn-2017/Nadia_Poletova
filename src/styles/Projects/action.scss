@@ -1,0 +1,50 @@
+@import "../config/globals";
+    .todos-action-bar {
+        background-color: $bg-color;
+        height: $action-height;
+        border-top: 1px solid $list-border-color;
+        margin-top: -1px;
+        padding-right: $offset_3x;
+        padding-left: $offset_3x;
+        color: $action-text-color;
+        font-weight: 100;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+        }
+
+
+    .todos-action-bar .todos-action-bar_clear-completed {
+        background-color: $bg-color;
+        color: $action-text-color;
+        border: 1px solid $bg-color;
+        outline: none;
+        cursor: pointer;
+
+        }
+
+    .todos-action-bar .todos-action-bar_clear-completed.active {
+        border: 1px solid $action-border-color;
+        }
+
+
+    .todos-action-bar .todos-action-bar_counter {
+        cursor: pointer;
+        flex-basis: 90px;
+        }
+
+    .todos-action-bar .todos_filters {
+        }
+
+    .todos-action-bar .todos_filters .todos-filter {
+        background-color: $bg-color;
+        border: 1px solid $bg-color;
+        outline: none;
+        color: $action-text-color;
+        cursor: pointer;
+        }
+
+    .todos-action-bar .todos_filters .todos_filter.__active {
+        border: 1px solid $action-border-color;
+        }

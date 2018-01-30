@@ -1,0 +1,107 @@
+@import "../config/globals";
+    .todos-list {
+        margin: 0;
+        border: none;
+        min-height: $list-min-height;
+        position: relative;
+        font-weight: 100;
+        }
+
+
+    .todos-list .todo-item {
+        height: $item-height;
+        position: relative;
+        border-bottom: 1px solid $list-border-color;
+        border-left: none;
+        border-right: none;
+        padding: 0 $offset_3x;
+        overflow: hidden;
+        flex-direction: row;
+        align-items: center;
+        display: flex;
+        }
+
+    .todos-list .todo-item:hover {
+        background: $bg-color-hover;
+        cursor: pointer;
+        }
+    .todos-list .todo-item:hover .todo-item_remove {
+        background: url('../../../images/icons/close.png') no-repeat 0 0;
+        }
+
+    .todo-item:hover .todo-item_text {
+        background-color: $bg-color-hover;
+        }
+
+
+    .todo-item_ready-mark {
+        opacity: 0;
+        padding: 0;
+        width: 105%;
+        height: 105%;
+        overflow: hidden;
+        position: absolute;
+        cursor: pointer;
+        z-index: 2;
+        }
+    .todo-item_ready-mark:checked ~ .todo-item_ready-img {
+        background: url('../../../images/icons/completed.png') no-repeat center;
+        border: 1px solid $checkbox-color;
+        }
+
+    .todo-item .todo-item_ready-img {
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50px;
+        position: absolute;
+        z-index: 1;
+        }
+
+
+
+    .todo-item .todo-item_textbox {
+        padding-top: $offset_6x;
+        flex-grow: 2;
+        }
+
+    .todo-item_textbox .todo-item_text {
+        width: 100%;
+        overflow: hidden;
+        padding-right: $offset_8x;
+        padding-top: 0;
+        resize: none;
+        border: none;
+        outline: none;
+        font-size: $list-text-size;
+        color: $list-text-color;
+        cursor: pointer;
+        }
+
+
+    .todo-item .todo-item_remove {
+        flex-basis: $offset_4x;
+        width: $offset_4x;
+        height: $offset_4x;
+        position: absolute;
+        bottom: $offset_5x+$offset_half;
+        right: $offset_3x;
+        border: 0;
+        cursor: pointer;
+        background: $bg-color;
+        outline: none;
+        }
+
+
+    .todos-list .todo-item.__ready {
+        .todo-item_textbox {
+            .todo-item_text {
+                text-decoration: line-through;
+                color: $list-text-color-ready;
+                }
+            }
+        }
+    .todos-list .todo-item.__hide {
+        display: none;
+        }
+
