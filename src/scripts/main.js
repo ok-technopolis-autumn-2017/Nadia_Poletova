@@ -17,9 +17,11 @@ function init() {
     var todoActionsBar = new TodoActionsBar();
 
 
+
     addTodos
         .on('newTodo',
-            function (todoData) { todoList.createItem(todoData); }
+            function (todoData) {
+            todoList.createItem(todoData); }
         )
         .on('markAsReadyAll',
             function () { todoList.markAsReadyAll();}
@@ -28,8 +30,12 @@ function init() {
     function itemsCountWatcher () {
         var itemsCount = todoList.getItemsCount();
 
+        console.log(itemsCount);
+
         if (itemsCount !== 0) {
             todoMain.showFullInterface();
+        } else {
+            todoMain.hideFullInterface();
         }
 
         todoActionsBar.setItemsCount(itemsCount);
@@ -40,7 +46,7 @@ function init() {
 
     todoActionsBar.on(
         'clearCompleted',
-        function () { todoList.removeCompletedItems(); }
+        function () { todoList.removeCompletedItems();}
     );
 
     todoActionsBar.on('filterSelected', function (filterId) {

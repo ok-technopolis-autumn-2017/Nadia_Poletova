@@ -10,7 +10,7 @@
 
 <script type="text/html" id="todoItemTemplate">
     <div class="todo-item">
-        <div class="todo-item_checkbox">
+        <div class="my-checkbox">
 
             <input type="checkbox" class="todo-item_ready-mark js-todo-item_mark-ready"
                    aria-label="Mark as (un)performed">
@@ -54,10 +54,10 @@
                 <button class="todos-filter filter __active" data-filter="all"
                         aria-label="Filter: view all">All
                 </button>
-                <button class="todos-filter filter" data-filter="ready"
+                <button class="todos-filter filter" data-filter="unready"
                         aria-label="Filter: view unperformed">Active
                 </button>
-                <button class="todos-filter filter" data-filter="unready"
+                <button class="todos-filter filter" data-filter="ready"
                         aria-label="Filter: view performed">Completed
                 </button>
             </div>

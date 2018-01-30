@@ -7,6 +7,7 @@
         font-weight: 100;
         }
 
+
     .todos-list .todo-item {
         height: $item-height;
         position: relative;
@@ -28,22 +29,12 @@
         background: url('../../../images/icons/close.png') no-repeat 0 0;
         }
 
-    .todos-list .todo-item:hover .todo-item_text {
+    .todo-item:hover .todo-item_text {
         background-color: $bg-color-hover;
         }
 
-    .todos-list .todo-item .todo-item_checkbox {
 
-        width: $item-checkbox-length;
-        height: $item-checkbox-length;
-        border: 1px solid $list-border-color;
-        border-radius: 50px;
-        margin-right: $offset_3x;
-        flex-basis: $item-checkbox-length;
-        position: relative;
-        z-index: 0;
-        }
-    .todos-list .todo-item .todo-item_checkbox .todo-item_ready-mark {
+    .todo-item_ready-mark {
         opacity: 0;
         padding: 0;
         width: 105%;
@@ -53,12 +44,12 @@
         cursor: pointer;
         z-index: 2;
         }
-    .todos-list .todo-item .todo-item_checkbox .todo-item_ready-mark:checked ~ .todo-item_ready-img {
+    .todo-item_ready-mark:checked ~ .todo-item_ready-img {
         background: url('../../../images/icons/completed.png') no-repeat center;
         border: 1px solid $checkbox-color;
         }
 
-    .todos-list .todo-item .todo-item_checkbox .todo-item_ready-img {
+    .todo-item .todo-item_ready-img {
         padding: 0;
         width: 100%;
         height: 100%;
@@ -69,12 +60,12 @@
 
 
 
-    .todos-list .todo-item .todo-item_textbox {
+    .todo-item .todo-item_textbox {
         padding-top: $offset_6x;
         flex-grow: 2;
         }
 
-    .todos-list .todo-item .todo-item_textbox .todo-item_text {
+    .todo-item_textbox .todo-item_text {
         width: 100%;
         overflow: hidden;
         padding-right: $offset_8x;
@@ -88,10 +79,10 @@
         }
 
 
-    .todos-list .todo-item .todo-item_remove {
-        flex-basis: $item-remove-length;
-        width: $item-remove-length;
-        height: $item-remove-length;
+    .todo-item .todo-item_remove {
+        flex-basis: $offset_4x;
+        width: $offset_4x;
+        height: $offset_4x;
         position: absolute;
         bottom: $offset_5x+$offset_half;
         right: $offset_3x;
@@ -113,3 +104,4 @@
     .todos-list .todo-item.__hide {
         display: none;
         }
+

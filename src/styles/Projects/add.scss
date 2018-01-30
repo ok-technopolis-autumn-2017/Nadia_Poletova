@@ -55,7 +55,7 @@
         cursor: pointer;
         }
 
-    .todos-add .todos-add_input-container .todos-add_input.placeholder {
+    .todos-add_input-container .todos-add_input::placeholder {
         color: $add-text-color-placeholder;
         font-style: italic;
         }
